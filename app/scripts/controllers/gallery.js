@@ -12,11 +12,7 @@ app.controller('GalleryViewCtrl', function($scope, $routeParams, $resource) {
 		id: $routeParams.galleryId
 	}, function(data) {
 		$scope.gallery = data.post;
+		$scope.nextGallery = data.next_url;
+		$scope.prevGallery = data.previous_url;
 	});
-
-	$scope.nextGallery = data.next_url;
-	$scope.prevGallery = data.previous_url;
-
-	console.log(data);
-	console.log(data.post);
 });
