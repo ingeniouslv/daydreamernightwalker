@@ -7,7 +7,7 @@ app.controller('GalleryCtrl', function($scope, $resource) {
 		{ get: { method: 'JSONP' } }
 	);
 
-	var data = Galleries.get({
+	Galleries.get({
 		post_type: 'galleries'
 	}, function(data) {
 		$scope.galleries = data.posts;

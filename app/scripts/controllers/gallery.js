@@ -7,7 +7,7 @@ app.controller('GalleryViewCtrl', function($scope, $routeParams, $resource) {
 		{ get: { method: 'JSONP' } }
 	);
 
-	var data = GalleryAPI.get({
+	GalleryAPI.get({
 		post_type: 'galleries',
 		id: $routeParams.galleryId
 	}, function(data) {

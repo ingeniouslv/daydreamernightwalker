@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ngAnimate'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -21,5 +22,5 @@ angular
         redirectTo: '/'
       });
 
-      $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
   });

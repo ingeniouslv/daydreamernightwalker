@@ -1,11 +1,9 @@
 
-<div class="text-center" ng-controller="GalleryCtrl">
+<div class="text-right" ng-controller="GalleryCtrl">
   <div class="row">
     <div ng-repeat="gallery in galleries" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 imgbox">
-      <a ng-href="/gallery/{{ gallery.id }}" class="gallery-thumb" style="background-image: url('{{ gallery.thumbnail }}');">  
-        <h5>{{ gallery.title }}</h5>
-        <small>{{ gallery.author.name }}</small>
-      </a>
+      <a ng-href="/gallery/{{ gallery.id }}" class="gallery-thumb" style="background-image: url('{{ gallery.thumbnail }}');">&nbsp;</a>
+      <h5>{{ gallery.title }} <span class="small muted">{{ gallery.author.name }}</span></h5>
     </div>
   </div>
 </div>
