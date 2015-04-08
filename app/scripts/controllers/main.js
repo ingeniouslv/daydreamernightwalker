@@ -3,10 +3,13 @@
 'use strict';
 
 var app = angular.module('siteApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .factory('Page', function() {
+	var title = 'Day Dreamer Night Walker';
+	return {
+		title: function() { return title ; },
+		setTitle: function(newTitle) { title = newTitle; }
+	};
+})
+  .controller('MainCtrl', function ($scope, Page) {
+    $scope.Page = Page;
   });
